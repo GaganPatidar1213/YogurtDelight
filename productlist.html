@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yogurt Selection</title>
+  <style>
+       #yogurt-container {
+            margin: auto;
+            padding: 40px;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+        #h1 {
+            margin: auto;
+            padding: 10px;
+            margin-left: 35%;
+        }
+
+        /* Styling the h1 */
+        h1 {
+            margin-left: 40%;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: #f8f8f8;
+            font-family: 'Lato', sans-serif;
+        }
+        /* Add to Cart button styling */
+        button {
+            background-color: #28a745; /* Green background */
+            color: white;              /* White text */
+            font-size: 1.2rem;          /* Large font */
+            padding: 10px 20px;         /* Padding for spacing */
+            border: none;               /* Remove border */
+            border-radius: 30px;        /* Rounded corners */
+            cursor: pointer;            /* Pointer cursor on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: all 0.3s ease;  /* Smooth transition for effects */
+        }
+
+        /* Hover effect */
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Bigger shadow */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        /* Active (clicked) effect */
+        button:active {
+            background-color: #1e7e34;  /* Even darker green */
+            transform: translateY(2px);  /* Button press effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+        }
+
+        /* Responsive button design */
+        @media (max-width: 768px) {
+            button {
+                font-size: 1rem;        /* Adjust font size for smaller screens */
+                padding: 8px 16px;      /* Adjust padding for smaller screens */
+            }
+        }
+
+        /* Footer styling */
+        #footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .connect a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #555;
+        }
+
+        .connect a:hover {
+            color: #28a745; /* Hover color for social media links */
+        }
+        
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  
+  
+
+</head>
+<body >
+    <div style="background-color: #f8f8f8;">
+   <div style="background-color:#c8c10d; top-margin: 40px">
+  <h1 style = " margin-left: 40%; margin-top: 40px; margin-bottom: 10px; color: #f8f8f8;font-family: lato-regular-webfont;">Yogurt Selection</h1>
+</div> 
+  <form action="order" method="post">
+    <div id="yogurt-container" style="border: 120px; border-right: 100px;background-color: antiquewhite;">
+      <div class="yogurt-item">
+        <p>Mobile Number</p>
+        <input type="number" name="mobile" value="">
+        
+      </div>
+      <div class="yogurt-item">
+        <p>address</p>
+        <input type="text" name="mobile" value="">
+        
+      </div>
+      <div class="yogurt-item">
+        <input type="hidden" name="flavor" value="kiwi">
+        <p>Kiwi</p>
+        <p>Rs. 299</p>
+        <label for="kiwi-quantity">Quantity:</label>
+        <input type="number" id="kiwi-quantity" name="kiwi-quantity" value="0" min="0">
+      </div>
+      <div class="yogurt-item">
+        <input type="hidden" name="flavor" value="mango">
+        <p>Mango</p>
+        <p>Rs. 299</p>
+        <label for="mango-quantity">Quantity:</label>
+        <input type="number" id="mango-quantity" name="mango-quantity" value="0" min="0">
+      </div>
+      <div class="yogurt-item">
+        <input type="hidden" name="flavor" value="strawberry">
+        <p>Strawberry</p>
+        <p>Rs. 299</p>
+        <label for="strawberry-quantity">Quantity:</label>
+        <input type="number" id="strawberry-quantity" name="strawberry-quantity" value="0" min="0">
+      </div>
+      <div class="yogurt-item">
+        <input type="hidden" name="flavor" value="blackberry">
+        <p>Blackberry</p>
+        <p>Rs. 299</p>
+        <label for="blackberry-quantity">Quantity:</label>
+        <input type="number" id="blackberry-quantity" name="blackberry-quantity" value="0" min="0">
+      </div>
+    
+<div style="margin-left: 42%; margin-top: 10px;" >
+    <button onclick="YogurtCart()">Add to Cart</button>
+    <script>
+        function redirectToProductList() {
+            window.location.href = "YogurtCart.java";
+        }
+    </script>
+    </div>
+</div>
+  </form>
+
+  <div id="cart">
+    <h2></h2>
+    <ul id="cart-items">
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+  <div id="footer">
+    <div>
+        <div class="connect">
+            <a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
+            <a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
+            <a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus">googleplus</a>
+            <a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a>
+        </div>
+        <p>&copy; 2024 Freeeze. All Rights Reserved.</p>
+    </div>
+</div>
+</div>
+</body>
+</html>
